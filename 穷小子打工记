@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ChinaQY/-/Main/UI'))()
-local Window = OrionLib:MakeWindow({Name = "穷小子打工记", HidePremium = false})
+local Window = OrionLib:MakeWindow({Name = "穷小子打工记11", HidePremium = false})
 ------基础设置------
 _G.Quantity = 0
 _G.Wait_time = 2
