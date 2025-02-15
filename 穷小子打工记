@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ChinaQY/-/Main/UI'))()
-local Window = OrionLib:MakeWindow({Name = "穷小子打工记1", HidePremium = false})
+local Window = OrionLib:MakeWindow({Name = "穷小子打工记", HidePremium = false})
 ------基础设置------
 _G.Quantity = 0
 _G.Wait_time = 2
@@ -19,7 +19,6 @@ local LocalPlayer = game.Players.LocalPlayer
 local function fireproximitypromptfrequency(path)
     for i = 1, _G.Quantity do
         fireproximityprompt(path)
-		_G.Takethecount:SetText("已经递归:"..tostring(i))
     end
 end
 local function Toolequip(Name)
