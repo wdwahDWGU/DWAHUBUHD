@@ -1,5 +1,5 @@
-local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ChinaQY/-/Main/UI'))()
-local Window = OrionLib:MakeWindow({Name = "穷小子打工记", HidePremium = false})
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "穷小子打工记1", HidePremium = false})
 ------基础设置------
 _G.Quantity = 0
 _G.Wait_time = 2
@@ -31,25 +31,19 @@ local function Toolequip(Name)
 end
 local function Auto()
     if _G.ServerCaton then
-		Library:Notify("运行卡服功能", 5)
         fireproximitypromptfrequency(Take)
         wait(_G.Wait_time)
         Toolequip("生肉")
-		Library:Notify("请手动重置人物达到卡服最后目的", 20)
         else
-		Library:Notify("第一步:拿取生肉并装备", 5)
         fireproximitypromptfrequency(Take)
         wait(_G.Wait_time)
         Toolequip("生肉")
         wait(_G.Wait_time)
-		Library:Notify("第二步:烹饪生肉并装备熟肉", 5)
         fireproximitypromptfrequency(Cook)
         wait(_G.Wait_time)
         Toolequip("熟肉")
         wait(_G.Wait_time)
-		Library:Notify("最后一步:出售熟肉", 5)
         fireproximitypromptfrequency(Store)
-		Library:Notify("已经完成所有操作", 5)
     end
 end
 local Tab = Window:MakeTab({
@@ -101,4 +95,3 @@ Tab:AddButton({
         Auto()
   	end
 })
-OrionLib:Init()
